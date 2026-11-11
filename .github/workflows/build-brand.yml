@@ -1,0 +1,29 @@
+name: Build Alfred brand icons
+on:
+  push:
+    branches: [main]
+    paths:
+      - assets/alfred-symbol.svg
+      - tools/build_brand.py
+      - .github/workflows/build-brand.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate PNG icons
+        run: python3 tools/build_brand.py
+      - name: Commit generated icons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f custom_components/alfred_snapshot/brand/icon.png custom_components/alfred_snapshot/brand/icon@2x.png
+          if git diff --cached --quiet; then
+            echo "Icons unchanged"
+          else
+            git commit -m "Generate Alfred brand PNG icons"
+            git push origin HEAD:main
+          fi
