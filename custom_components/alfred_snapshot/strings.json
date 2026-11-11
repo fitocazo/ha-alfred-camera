@@ -1,0 +1,44 @@
+{
+  "title": "AlfredCamera Snapshots (experimental)",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Importar sessao Alfred",
+        "description": "Cole o objeto auth exportado localmente do WebViewer. Feche os WebViewers dessa sessao, sem sair da conta. Segredos serao armazenados no HA. Use sessao nova, nao exposta.",
+        "data": {
+          "session_json": "Sessao Alfred (JSON privado)"
+        }
+      },
+      "cameras": {
+        "title": "Selecionar cameras",
+        "description": "Snapshots sob demanda. Renovacao automatica e experimental, desativada por padrao; pode rotacionar o refresh token no Alfred.",
+        "data": {
+          "cameras": "Cameras",
+          "cache_seconds": "Cache minimo em segundos (30 a 3600)",
+          "auto_refresh": "Permitir renovacao automatica experimental"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Sessao invalida ou expirada. Exporte uma sessao nova.",
+      "cannot_connect": "Nao foi possivel consultar as cameras."
+    },
+    "abort": {
+      "already_configured": "Conta ja configurada.",
+      "wrong_account": "A sessao pertence a outra conta.",
+      "reauth_successful": "Sessao atualizada."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcoes de snapshots Alfred",
+        "description": "Renovacao automatica experimental: pode rotacionar credenciais no Alfred. Mantenha os WebViewers desta sessao fechados. Cache limita pedidos; nao e agendamento de captura.",
+        "data": {
+          "cache_seconds": "Cache minimo (segundos)",
+          "auto_refresh": "Permitir renovacao automatica experimental"
+        }
+      }
+    }
+  }
+}

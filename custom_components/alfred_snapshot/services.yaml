@@ -1,0 +1,7 @@
+refresh_snapshot:
+  name: Atualizar snapshot sem cache
+  description: Solicita uma nova imagem ao Alfred, ignorando o cache e o intervalo de tentativa local. Aguarda a resposta e atualiza last_snapshot_success somente em caso de sucesso. Nao inicia video ao vivo.
+  target:
+    entity:
+      integration: alfred_snapshot
+      domain: camera

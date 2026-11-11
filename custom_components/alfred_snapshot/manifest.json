@@ -1,0 +1,11 @@
+{
+  "domain": "alfred_snapshot",
+  "name": "AlfredCamera Snapshots (Experimental)",
+  "version": "0.2.2",
+  "config_flow": true,
+  "documentation": "https://support.alfred.camera/",
+  "iot_class": "cloud_polling",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": []
+}
