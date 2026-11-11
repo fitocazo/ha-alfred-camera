@@ -6,10 +6,11 @@ from homeassistant.components.camera import Camera, CameraEntityFeature
 from homeassistant.helpers.device_registry import DeviceInfo
 from .client import AuthError, ProtocolError
 from .const import DOMAIN
+from .selection import selected_cameras
 
 async def async_setup_entry(hass, entry, async_add_entities):
     data = hass.data[DOMAIN][entry.entry_id]
-    selected = set(entry.data.get("cameras", []))
+    selected = set(selected_cameras(entry))
     async_add_entities([AlfredCamera(entry, data["client"], d) for d in data["devices"] if d.get("_id") in selected])
 
 class AlfredCamera(Camera):

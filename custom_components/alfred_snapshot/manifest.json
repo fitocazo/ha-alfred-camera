@@ -1,13 +1,1 @@
-{
-  "domain": "alfred_snapshot",
-  "name": "AlfredCamera Snapshots (Experimental)",
-  "codeowners": ["@fitocazo"],
-  "config_flow": true,
-  "dependencies": [],
-  "documentation": "https://github.com/fitocazo/ha-alfred-camera",
-  "integration_type": "hub",
-  "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/fitocazo/ha-alfred-camera/issues",
-  "requirements": [],
-  "version": "0.2.2"
-}
+{"domain":"alfred_snapshot","name":"AlfredCamera Snapshots (Experimental)","codeowners":["@fitocazo"],"config_flow":true,"dependencies":[],"documentation":"https://github.com/fitocazo/ha-alfred-camera","integration_type":"hub","iot_class":"cloud_polling","issue_tracker":"https://github.com/fitocazo/ha-alfred-camera/issues","requirements":[],"version":"0.2.3"}
