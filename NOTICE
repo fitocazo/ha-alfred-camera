@@ -1,0 +1,13 @@
+Third-party branding
+
+The MIT license in LICENSE applies to the project-authored source code and
+documentation. It does not grant rights to the AlfredCamera name, trademarks,
+or third-party artwork.
+
+Excluded branding assets include assets/alfred-symbol.svg and the generated
+custom_components/alfred_snapshot/brand/icon.png and icon@2x.png. These depict
+the AlfredCamera WebViewer symbol and remain subject to their respective
+rights holders' terms. See assets/BRAND.md for provenance.
+
+This is an unofficial integration. No affiliation, endorsement, or trademark
+license from AlfredCamera is implied.
