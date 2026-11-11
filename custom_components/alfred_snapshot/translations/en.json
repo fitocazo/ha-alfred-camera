@@ -3,40 +3,38 @@
   "config": {
     "step": {
       "user": {
-        "title": "Importar sessao Alfred",
-        "description": "Cole o objeto auth exportado localmente do WebViewer. Feche os WebViewers dessa sessao, sem sair da conta. Segredos serao armazenados no HA. Use sessao nova, nao exposta.",
-        "data": {
-          "session_json": "Sessao Alfred (JSON privado)"
-        }
+        "title": "Import an Alfred session",
+        "description": "Paste the auth object exported locally from WebViewer. Close WebViewers using this session without signing out. Secrets will be stored in Home Assistant. Use a new, unexposed session.",
+        "data": {"session_json": "Alfred session (private JSON)"}
       },
       "cameras": {
-        "title": "Selecionar cameras",
-        "description": "Snapshots sob demanda. Renovacao automatica e experimental, desativada por padrao; pode rotacionar o refresh token no Alfred.",
+        "title": "Select cameras",
+        "description": "Snapshots are fetched on demand. Automatic refresh is experimental, disabled by default, and may rotate Alfred refresh credentials.",
         "data": {
           "cameras": "Cameras",
-          "cache_seconds": "Cache minimo em segundos (30 a 3600)",
-          "auto_refresh": "Permitir renovacao automatica experimental"
+          "cache_seconds": "Minimum cache duration in seconds (30 to 3600)",
+          "auto_refresh": "Allow experimental automatic session refresh"
         }
       }
     },
     "error": {
-      "invalid_auth": "Sessao invalida ou expirada. Exporte uma sessao nova.",
-      "cannot_connect": "Nao foi possivel consultar as cameras."
+      "invalid_auth": "Invalid or expired session. Export a new session.",
+      "cannot_connect": "Unable to retrieve the cameras."
     },
     "abort": {
-      "already_configured": "Conta ja configurada.",
-      "wrong_account": "A sessao pertence a outra conta.",
-      "reauth_successful": "Sessao atualizada."
+      "already_configured": "This account is already configured.",
+      "wrong_account": "The session belongs to another account.",
+      "reauth_successful": "Session updated successfully."
     }
   },
   "options": {
     "step": {
       "init": {
-        "title": "Opcoes de snapshots Alfred",
-        "description": "Renovacao automatica experimental: pode rotacionar credenciais no Alfred. Mantenha os WebViewers desta sessao fechados. Cache limita pedidos; nao e agendamento de captura.",
+        "title": "Alfred snapshot options",
+        "description": "Experimental automatic refresh may rotate credentials on Alfred. Keep other WebViewers using this session closed. Cache limits requests; it does not schedule captures.",
         "data": {
-          "cache_seconds": "Cache minimo (segundos)",
-          "auto_refresh": "Permitir renovacao automatica experimental"
+          "cache_seconds": "Minimum cache duration (seconds)",
+          "auto_refresh": "Allow experimental automatic session refresh"
         }
       }
     }
